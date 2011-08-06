@@ -41,7 +41,7 @@ class tribes {
 
 //Test Code
 
-$bob = new Tribe();
+$bob = new Tribes();
 $bob->clearTribes();
 
 ?>
