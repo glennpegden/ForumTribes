@@ -45,4 +45,3 @@ $bob = new Tribes();
 $bob->clearTribes();
 
 ?>
-
