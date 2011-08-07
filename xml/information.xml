@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<information>
+	<data>
+		<name>Tribes</name>
+		<public_name>Tribes</public_name>
+		<author>Glenn & Toby</author>
+		<description>Tribes for your forum</description>
+		<templategroups>
+			<template match="exact">BRFCS-10/11</template>
+			<template match="contains">BRFCS</template>
+		</templategroups>
+		<hide_tab>0</hide_tab>
+	</data>
+</information>
