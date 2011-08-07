@@ -176,18 +176,5 @@ $this->registry->getClass('output')->sendOutput();
 }
 
 
-//Test Code
-
-//$tmp = new tribes();
-//echo "Rating: ".$tmp->canJoinTribe(717,32)."<BR/>\n";
-//$tmp->canJoinTribe(218,32);
-//$tmp->canJoinTribe(6114,32);
-//$tmp->canJoinTribe(9491,32);
-//$tmp->canJoinTribe(5388,32);
-
-//$toprates = $tmp->TestTop(36,20);
-//for($i=0;$i<$toprates['count']; $i++) {
-//   echo "User: ".$toprates[$i]['name']." Posts: ".$toprates[$i]['posts']." Rating: ".$toprates[$i]['rating']."<BR/>\n";
-//}  
 
 ?>
