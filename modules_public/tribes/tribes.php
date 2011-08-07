@@ -23,10 +23,6 @@ class public_tribes_tribes_tribes extends ipsCommand {
 
 		// Check is a user has sufficient rep to join the tribe
 
-                //$this->db->build( array( 'select' => 'mgroup_others', 'from' => 'members', 'where' => 'mgroup_others like "%,'.$forumID.',%";' ) );
-                //$this->db->build( array( 'select' => 'mgroup_others', 'from' => 'members' ) );
-
-
 // RETURN POSITIVE RATINGS
 $this->DB->allow_sub_select=1;
 		$this->DB->build( array( 'select' => 'SUM(powerboardreputation_index.rep_rating) as 
@@ -96,11 +92,7 @@ author_id'));
 
 $this->lang->loadLanguageFile( array( 'key' ) );
 $this->registry->output->setTitle("Forum Tribes");
-$this->registry->output->addNavigation( "Stuff to show", 'app=foo&module=bar' );
-
-// $template = 
-// var_dump($this->registry->output->getTemplate('boards'));
-//->template();
+$this->registry->output->addNavigation( "Forum Tribes", 'app=tribes' );
 
 
                 $this->db = ipsRegistry::DB();
@@ -143,6 +135,7 @@ $this->registry->getClass('output')->sendOutput();
 
         $member = $this->registry->member()->fetchMemberData();
 	$this->registry->output->setTitle("Forum Tribes");
+        $this->registry->output->addNavigation( "Forum Tribes", 'app=tribes' );
 	
 	if ($this->canJoinTribe($member['member_id'],$gid) > $this->passmark) {	
 			
@@ -154,8 +147,6 @@ $this->registry->getClass('output')->sendOutput();
 
                 array_push($groups,$gid);
 		array_unique($groups);
-
-//		var_dump($groups);
 
 		$str = ",";
 		foreach ($groups as $group) {
