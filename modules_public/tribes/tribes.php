@@ -124,7 +124,7 @@ you'll be more likely to be invited to tribes of people who both like and dislik
 					if ($row) {
 						$this->registry->getClass('output')->addContent( "<p>You are already in tribe " .$i . ".</p>");
 					} else {	
-						$this->registry->getClass('output')->addContent("<p>You are invited to join a tribe (".$i."). If you 
+						$this->registry->getClass('output')->addContent("<p>You are invited to join tribe ".$i.". If you 
 want <a href='index.php?app=tribes?join=" . $i 
 . "'>Click
 Here To Join</a>.</p>");
