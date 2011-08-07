@@ -90,10 +90,16 @@ author_id'));
  function showAvailableGroups() {
 
 
-$this->lang->loadLanguageFile( array( 'key' ) );
-$this->registry->output->setTitle("Forum Tribes");
-$this->registry->output->addNavigation( "Forum Tribes", 'app=tribes' );
+		$this->lang->loadLanguageFile( array( 'key' ) );
+		$this->registry->output->setTitle("Forum Tribes");
+		$this->registry->output->addNavigation( "Forum Tribes", 'app=tribes' );
 
+		$this->registry->getClass('output')->addContent("<p>Tribes are like-minded groups of people who can chat together. 
+The software carefully analyses which posts people rate up and rate down to see which tribes they would fit in with. People can belong to multiple 
+tribes at once, but for evey tribe you join it gets less likely you'll be welcomed in more of them.</p>");
+
+		$this->registry->getClass('output')->addContent("<p>Tribes are not based around topic, instead they are based around people who share similar likes and dislikes in what they read on the forums. As you like and dislike post (and as people like and dislike yours), 
+you'll be more likely to be invited to tribes of people who both like and dislike similar post to you as well as liking your posts</p>");
 
                 $this->db = ipsRegistry::DB();
 
